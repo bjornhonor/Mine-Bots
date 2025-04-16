@@ -4,15 +4,8 @@ const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const minecraftData = require('minecraft-data');
 const pvp = require('mineflayer-pvp').plugin;
 const armorManager = require('mineflayer-armor-manager');
-// const autoeat = require('mineflayer-auto-eat').plugin;
-
-const bot = mineflayer.createBot({
-    host: '192.168.15.97',
-    port: 5538,
-    version: '1.21.4',
-    auth: 'offline',
-    username: 'O_GUARDIAO'
-});
+const config = require('./auth.js');
+const bot = mineflayer.createBot(config);
 
 // plugins
 bot.loadPlugin(pathfinder);

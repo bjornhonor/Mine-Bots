@@ -1,14 +1,9 @@
 const mineflayer = require('mineflayer');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const minecraftData = require('minecraft-data');
+const config = require('./auth.js');
 
-const bot = mineflayer.createBot({
-    host: '192.168.15.97',
-    port: 5538,
-    version: '1.21.4', // Verifique se esta versão é compatível com o servidor
-    auth: 'offline',
-    username: 'ESCRAVO'
-});
+const bot = mineflayer.createBot(config);
 
 const chefe = 'Carraxinjinping';
 
